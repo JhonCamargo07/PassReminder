@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package datos;
 
 import java.sql.*;
@@ -13,7 +9,12 @@ import org.apache.commons.dbcp2.BasicDataSource;
  * @author Camargo
  */
 public class Conexion {
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/PassReminder?useSSL=false&useTimezone=true&serverTimezona=UTC&allowPublicKeyRetrieval=true";
+//    private static final String JDBC_URL = "jdbc:mysql://localhost/id17955299_passreminder?useSSL=false&useTimezone=true&serverTimezona=UTC&allowPublicKeyRetrieval=true";
+//    private static final String JDBC_URL = "jdbc:mysql://145.14.145.92/id17955299_passreminder";
+//    private static final String JDBC_URL = "jdbc:mysql://145.14.145.145:3306/id17955299_passreminder?useSSL=false&useTimezone=true&serverTimezona=UTC&allowPublicKeyRetrieval=true";
+//    private static final String JDBC_USER = "id17955299_jhoncamargo21";
+//    private static final String JDBC_PASSWORD = "Egl%AL@*6WdL1c6S";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/passreminder?useSSL=false&useTimezone=true&serverTimezona=UTC&allowPublicKeyRetrieval=true";
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASSWORD = "";
     
