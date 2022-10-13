@@ -1,23 +1,22 @@
 -- drop database if exists passreminder;
+CREATE DATABASE PassReminder;
 
-Create database PassReminder;
-Use PassReminder;
+USE PassReminder;
 
-Create table usuario(
-	id_usuario int auto_increment primary key not null,
-    email_user varchar(150) unique not null,
-    password_U varchar(265) not null
+CREATE TABLE USER (
+    id_user INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    email_user VARCHAR (150) UNIQUE NOT NULL,
+    password_user VARCHAR (265) NOT NULL
 );
 
-Create table pass(
-	id_pass int auto_increment primary key not null,
-    pagina_pass varchar(250) not null,
-    nombre_pass varchar(250) not null,
-    pass varchar(265) not null,
-    id_usuario_FK int not null
+CREATE TABLE pass (
+    id_pass INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    page_pass VARCHAR (250) NOT NULL,
+    name_pass VARCHAR (250) NOT NULL,
+    pass VARCHAR (265) NOT NULL,
+    id_user_FK INT NOT NULL
 );
 
-ALTER TABLE pass
-ADD CONSTRAINT pass_usuario
-FOREIGN KEY (id_usuario_FK)
-REFERENCES usuario (id_usuario) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE pass ADD CONSTRAINT pass_user FOREIGN KEY (id_user_FK) REFERENCES USER (id_user) ON
+UPDATE
+    CASCADE ON DELETE CASCADE
